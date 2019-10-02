@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.unice.polytech.creditrama.teamd</groupId>
-    <artifactId>bankservice</artifactId>
+    <artifactId>loginservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>bankservice</name>
+    <name>loginservice</name>
     <description>BankService</description>
 
     <properties>

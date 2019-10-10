@@ -1,4 +1,4 @@
-package com.unice.polytech.creditrama.teamd.loginservice;
+package fr.unice.polytech.si5.al.creditrama.teamd.loginservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

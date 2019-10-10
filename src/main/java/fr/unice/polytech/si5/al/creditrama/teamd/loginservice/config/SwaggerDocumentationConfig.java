@@ -1,4 +1,4 @@
-package com.unice.polytech.creditrama.teamd.loginservice.config;
+package fr.unice.polytech.si5.al.creditrama.teamd.loginservice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -30,7 +30,7 @@ public class SwaggerDocumentationConfig implements WebMvcConfigurer {
     public Docket customImplementation() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.unice.polytech.creditrama.teamd.bankservice"))
+                .apis(RequestHandlerSelectors.basePackage("fr.unice.polytech.si5.al.creditrama.teamd.loginservice"))
                 .build()
                 .apiInfo(apiInfo());
     }

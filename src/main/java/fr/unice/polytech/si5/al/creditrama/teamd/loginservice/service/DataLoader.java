@@ -10,12 +10,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class DataLoader implements ApplicationRunner {
 
-    private OauthClientDetailsRepository oauthClientDetailsRepository;
-
     @Autowired
-    public DataLoader(OauthClientDetailsRepository oauthClientDetailsRepository) {
-        this.oauthClientDetailsRepository = oauthClientDetailsRepository;
-    }
+    private OauthClientDetailsRepository oauthClientDetailsRepository;
 
     public void run(ApplicationArguments args) {
          OauthClientDetails oauthClientDetails = OauthClientDetails.builder()

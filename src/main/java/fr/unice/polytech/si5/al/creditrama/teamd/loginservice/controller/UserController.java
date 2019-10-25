@@ -29,7 +29,7 @@ public class UserController {
     public int userId(Authentication principal) {
         Optional<User> user =userDetailService.findUserByName(principal.getName());
         if(user.isPresent()){
-            return user.get().getId();
+            return user.get().getUserId();
         }
         return 0;
     }

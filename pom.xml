@@ -155,8 +155,8 @@
                 <plugins>
                     <plugin>
                         <groupId>com.spotify</groupId>
-                        <artifactId>${dockerfile-maven-version}</artifactId>
-                        <version>1.4.12</version>
+                        <artifactId>dockerfile-maven-plugin</artifactId>
+                        <version>${dockerfile-maven-version}</version>
                         <executions>
                             <execution>
                                 <id>default</id>

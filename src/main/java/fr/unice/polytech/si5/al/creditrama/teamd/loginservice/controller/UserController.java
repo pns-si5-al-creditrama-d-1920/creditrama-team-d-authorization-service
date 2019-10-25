@@ -1,7 +1,6 @@
 package fr.unice.polytech.si5.al.creditrama.teamd.loginservice.controller;
 
 import fr.unice.polytech.si5.al.creditrama.teamd.loginservice.model.User;
-import fr.unice.polytech.si5.al.creditrama.teamd.loginservice.service.UserDetailServiceImpl;
 import fr.unice.polytech.si5.al.creditrama.teamd.loginservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;

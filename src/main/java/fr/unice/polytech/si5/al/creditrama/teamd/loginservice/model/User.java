@@ -28,11 +28,11 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Column(name = "username")
+    @Column(name = "username", unique = true)
     private String username;
     @Column(name = "password")
     private String password;
-    @Column(name = "email")
+    @Column(name = "email", unique = true)
     private String email;
 
     //TODO FOR THE MOMENT WE HAVE NOT THE MAIL VALIDATION

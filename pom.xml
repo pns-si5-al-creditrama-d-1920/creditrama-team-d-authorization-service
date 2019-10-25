@@ -77,29 +77,6 @@
             <version>${h2.version}</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- SpringFox -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-core</artifactId>
-            <version>${swagger.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-bean-validators</artifactId>
-            <version>${swagger.version}</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${swagger.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${swagger.version}</version>
-        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -166,8 +143,8 @@
                 <plugins>
                     <plugin>
                         <groupId>com.spotify</groupId>
-                        <artifactId>dockerfile-maven-plugin</artifactId>
-                        <version>${dockerfile-maven-version}</version>
+                        <artifactId>${dockerfile-maven-version}</artifactId>
+                        <version>1.4.12</version>
                         <executions>
                             <execution>
                                 <id>default</id>

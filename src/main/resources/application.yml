@@ -2,9 +2,9 @@ server:
   port: 9191
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/creditrama?createDatabaseIfNotExist=true
-    username: postgres
-    password: docker
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:5432/${POSTGRES_DB:creditrama}
+    username: ${POSTGRES_USERNAME:postgres}
+    password: ${POSTGRES_PASSWORD:docker}
     driver-class-name: org.postgresql.Driver
     initialization-mode: always
   jpa:
@@ -13,7 +13,7 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     properties:
       hibernate:
-        ddl-auto: create-drop
+        ddl-auto: update
         show_sql: true
         format_sql: true
         jdbc:

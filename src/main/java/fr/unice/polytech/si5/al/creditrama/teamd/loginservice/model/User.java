@@ -26,13 +26,13 @@ public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Integer userId;
 
-    @Column(name = "username")
+    @Column(name = "username", unique = true)
     private String username;
     @Column(name = "password")
     private String password;
-    @Column(name = "email")
+    @Column(name = "email", unique = true)
     private String email;
 
     //TODO FOR THE MOMENT WE HAVE NOT THE MAIL VALIDATION
@@ -47,9 +47,9 @@ public class User implements Serializable {
 
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "role_user", joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
+    @JoinTable(name = "role_user", joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "userId")},
             inverseJoinColumns = {
-                    @JoinColumn(name = "role_id", referencedColumnName = "id")})
+                    @JoinColumn(name = "role_id", referencedColumnName = "roleId")})
     private List<Role> roles;
 
 

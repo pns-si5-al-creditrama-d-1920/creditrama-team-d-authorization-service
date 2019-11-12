@@ -1,6 +1,7 @@
 package fr.unice.polytech.si5.al.creditrama.teamd.loginservice.service;
 
 import fr.unice.polytech.si5.al.creditrama.teamd.loginservice.model.OauthClientDetails;
+import fr.unice.polytech.si5.al.creditrama.teamd.loginservice.repository.OauthClientDetailsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -9,12 +10,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class DataLoader implements ApplicationRunner {
 
-    private OauthClientDetailsRepository oauthClientDetailsRepository;
-
     @Autowired
-    public DataLoader(OauthClientDetailsRepository oauthClientDetailsRepository) {
-        this.oauthClientDetailsRepository = oauthClientDetailsRepository;
-    }
+    private OauthClientDetailsRepository oauthClientDetailsRepository;
 
     public void run(ApplicationArguments args) {
          OauthClientDetails oauthClientDetails = OauthClientDetails.builder()

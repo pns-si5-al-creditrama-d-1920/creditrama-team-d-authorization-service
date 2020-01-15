@@ -1,8 +1,8 @@
-package fr.unice.polytech.si5.al.creditrama.teamd.loginservice.service;
+package fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.service;
 
-import fr.unice.polytech.si5.al.creditrama.teamd.loginservice.model.AuthUserDetail;
-import fr.unice.polytech.si5.al.creditrama.teamd.loginservice.model.User;
-import fr.unice.polytech.si5.al.creditrama.teamd.loginservice.repository.UserDetailRepository;
+import fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.model.AuthUserDetail;
+import fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.model.User;
+import fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.repository.UserDetailRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AccountStatusUserDetailsChecker;
 import org.springframework.security.core.userdetails.UserDetails;

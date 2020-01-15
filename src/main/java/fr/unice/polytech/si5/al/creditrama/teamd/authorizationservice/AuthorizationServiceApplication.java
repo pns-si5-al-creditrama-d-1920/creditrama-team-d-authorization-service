@@ -1,4 +1,4 @@
-package fr.unice.polytech.si5.al.creditrama.teamd.loginservice;
+package fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,9 +6,9 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 
 @SpringBootApplication
 @EnableAuthorizationServer
-public class LoginServiceApplication  {
+public class AuthorizationServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LoginServiceApplication.class, args);
+        SpringApplication.run(AuthorizationServiceApplication.class, args);
     }
 }

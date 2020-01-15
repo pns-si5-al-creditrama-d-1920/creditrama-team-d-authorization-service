@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>fr.unice.polytech.si5.al.creditrama.teamd</groupId>
-    <artifactId>login-service</artifactId>
+    <artifactId>authorization-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>login-service</name>
-    <description>Login and register service</description>
+    <name>authorization-service</name>
+    <description>Authorization service</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -166,7 +166,7 @@
                             </execution>
                         </executions>
                         <configuration>
-                            <repository>creditrama-d-login-service</repository>
+                            <repository>creditrama-d-authorization-service</repository>
                             <tag>${project.version}</tag>
                             <buildArgs>
                                 <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>

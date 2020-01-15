@@ -1,7 +1,7 @@
-package fr.unice.polytech.si5.al.creditrama.teamd.loginservice.service;
+package fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.service;
 
-import fr.unice.polytech.si5.al.creditrama.teamd.loginservice.model.OauthClientDetails;
-import fr.unice.polytech.si5.al.creditrama.teamd.loginservice.repository.OauthClientDetailsRepository;
+import fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.model.OauthClientDetails;
+import fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.repository.OauthClientDetailsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

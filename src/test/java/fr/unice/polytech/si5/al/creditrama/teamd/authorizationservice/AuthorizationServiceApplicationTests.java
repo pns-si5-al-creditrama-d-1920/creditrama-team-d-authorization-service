@@ -1,4 +1,4 @@
-package fr.unice.polytech.si5.al.creditrama.teamd.loginservice;
+package fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class LoginServiceApplicationTests {
+public class AuthorizationServiceApplicationTests {
 
     @Test
     public void contextLoads() {

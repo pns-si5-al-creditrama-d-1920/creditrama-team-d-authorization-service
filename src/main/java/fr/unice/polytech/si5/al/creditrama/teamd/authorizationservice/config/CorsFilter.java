@@ -1,4 +1,4 @@
-package fr.unice.polytech.si5.al.creditrama.teamd.loginservice.config;
+package fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.config;
 
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;

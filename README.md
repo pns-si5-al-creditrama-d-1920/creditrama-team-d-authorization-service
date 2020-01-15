@@ -1,1 +1,1 @@
-# creditrama-team-d-login-service
+# creditrama-team-d-authorization-service

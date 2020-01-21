@@ -39,7 +39,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter imple
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers(HttpMethod.OPTIONS, "/oauth/token");
+        web.ignoring().antMatchers(HttpMethod.OPTIONS, "/oauth/token").antMatchers("/actuator/**");
     }
 
 }

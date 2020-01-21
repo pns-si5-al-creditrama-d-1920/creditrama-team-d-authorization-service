@@ -1,5 +1,5 @@
 server:
-  port: 9191
+  port: ${PORT:9191}
 spring:
   datasource:
     url: jdbc:postgresql://${POSTGRES_HOST:localhost}:5432/${POSTGRES_DB:creditrama_client}

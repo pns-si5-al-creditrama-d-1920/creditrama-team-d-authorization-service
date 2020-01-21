@@ -1,0 +1,282 @@
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-5hxp4-6[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-b2fnq[0m
+{"level":"warn","ts":1579641716.3035097,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1579641716.304392,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-5hxp4-6[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-qfznj[0m
+{"level":"warn","ts":1579641721.2212229,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1579641721.2350414,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-5hxp4-6[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-5hxp4-6[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-pns-si5-al-creditrama-d-1920-cr-fpvnm[0m
+{"level":"warn","ts":1579641768.0765555,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1579641769.8718505,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/pns-si5-al-creditrama-d-1920/creditrama-team-d-authorization-service.git @ v0.0.7 in path /workspace/source"}
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-5hxp4-6[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:3d702c2361ab2e464e2c91e674808110ac0e3cc6
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-5hxp4-6[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-5hxp4-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for fr.unice.polytech.si5.al.creditrama.teamd:authorization-service:jar:0.0.7
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:jar -> duplicate declaration of version 2.1.8.RELEASE @ line 71, column 21
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:jar -> duplicate declaration of version 2.1.8.RELEASE @ line 77, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] --< fr.unice.polytech.si5.al.creditrama.teamd:authorization-service >---
+[INFO] Building authorization-service 0.0.7
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ authorization-service ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ authorization-service ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ authorization-service ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 16 source files to /workspace/source/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ authorization-service ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ authorization-service ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /workspace/source/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ authorization-service ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests
+21:23:24.021 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:23:24.084 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+21:23:24.091 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+21:23:24.109 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+21:23:24.120 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests], using SpringBootContextLoader
+21:23:24.124 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]: class path resource [fr/unice/polytech/si5/al/creditrama/teamd/authorizationservice/AuthorizationServiceApplicationTests-context.xml] does not exist
+21:23:24.124 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]: class path resource [fr/unice/polytech/si5/al/creditrama/teamd/authorizationservice/AuthorizationServiceApplicationTestsContext.groovy] does not exist
+21:23:24.124 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:23:24.183 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]: AuthorizationServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:23:24.296 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:23:24.484 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/workspace/source/target/classes/fr/unice/polytech/si5/al/creditrama/teamd/authorizationservice/AuthorizationServiceApplication.class]
+21:23:24.485 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplication for test class fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests
+21:23:24.612 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]: using defaults.
+21:23:24.612 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+21:23:24.682 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5c33f1a9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1623b78d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@c8c12ac, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6adbc9d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4550bb58, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4ec4f3a0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@223191a6, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@49139829, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@9597028, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6069db50, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4efbca5a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1b7cc17c]
+21:23:24.685 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:23:24.686 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:23:24.687 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:23:24.687 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:23:24.688 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:23:24.688 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:23:24.691 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4562e04d testClass = AuthorizationServiceApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2a65fe7c testClass = AuthorizationServiceApplicationTests, locations = '{}', classes = '{class fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@42d8062c, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@59906517, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@612fc6eb, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@64f6106c], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+21:23:24.692 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:23:24.692 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:23:24.721 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+2020-01-21 21:23:26.707  INFO 70 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$cdc29aae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.9.RELEASE)
+
+2020-01-21 21:23:27.621  INFO 70 --- [           main] t.a.AuthorizationServiceApplicationTests : No active profile set, falling back to default profiles: default
+2020-01-21 21:23:30.116  INFO 70 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-21 21:23:30.397  INFO 70 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 274ms. Found 3 repository interfaces.
+2020-01-21 21:23:31.123  INFO 70 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=786a8f57-9bb2-34dd-9d22-35caf6a0375f
+2020-01-21 21:23:31.714  INFO 70 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b1a897b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-21 21:23:31.814  INFO 70 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$cdc29aae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-21 21:23:32.282  INFO 70 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-21 21:23:32.798  INFO 70 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-21 21:23:33.313  INFO 70 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-21 21:23:33.483  INFO 70 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.12.Final}
+2020-01-21 21:23:33.484  INFO 70 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-01-21 21:23:34.102  INFO 70 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-01-21 21:23:34.404  INFO 70 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-21 21:23:36.188  INFO 70 --- [           main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@1857fe6c'
+2020-01-21 21:23:36.194  INFO 70 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-21 21:23:40.185  INFO 70 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-21 21:23:40.295  WARN 70 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-21 21:23:42.593  INFO 70 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/oauth/token', OPTIONS], []
+2020-01-21 21:23:42.828  INFO 70 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1aaf73b7, org.springframework.security.web.context.SecurityContextPersistenceFilter@54d46c8, org.springframework.security.web.header.HeaderWriterFilter@c7cf8c4, org.springframework.security.web.authentication.logout.LogoutFilter@51aa2a58, org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter@c86c486, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4b5cdd07, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c34b0f2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52b891de, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@731d0d5c, org.springframework.security.web.session.SessionManagementFilter@731fae, org.springframework.security.web.access.ExceptionTranslationFilter@3c9971af, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3d667b59]
+2020-01-21 21:23:42.891  INFO 70 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@5bb3dee7, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@284f25e6, org.springframework.security.web.context.SecurityContextPersistenceFilter@4fb99927, org.springframework.security.web.header.HeaderWriterFilter@4fce3ed7, org.springframework.security.web.authentication.logout.LogoutFilter@5e8698c0, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@2a341e3d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d9df336, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@131b58d4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@285b491f, org.springframework.security.web.session.SessionManagementFilter@54033a65, org.springframework.security.web.access.ExceptionTranslationFilter@2728add3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@24e7087a]
+2020-01-21 21:23:42.926  INFO 70 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e295f7f, org.springframework.security.web.context.SecurityContextPersistenceFilter@7cdb05aa, org.springframework.security.web.header.HeaderWriterFilter@6556471b, org.springframework.security.web.csrf.CsrfFilter@1d0f7bcf, org.springframework.security.web.authentication.logout.LogoutFilter@5cb76070, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@713497cd, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7865cc83, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4b762988, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@19e5e110, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2079fcfc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77401977, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24f2608b, org.springframework.security.web.session.SessionManagementFilter@3e1897d, org.springframework.security.web.access.ExceptionTranslationFilter@1978b0d5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@753e4eb5]
+2020-01-21 21:23:43.893  INFO 70 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-21 21:23:44.085  INFO 70 --- [           main] t.a.AuthorizationServiceApplicationTests : Started AuthorizationServiceApplicationTests in 19.289 seconds (JVM running for 20.864)
+2020-01-21 21:23:44.115  INFO 70 --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.892 s - in fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests
+2020-01-21 21:23:44.698  INFO 70 --- [       Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-21 21:23:44.701  INFO 70 --- [       Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-21 21:23:44.702  INFO 70 --- [       Thread-6] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-01-21 21:23:44.703  WARN 70 --- [       Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2020-01-21 21:23:44.703 ERROR 70 --- [       Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2020-01-21 21:23:44.704  WARN 70 --- [       Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2020-01-21 21:23:44.704 ERROR 70 --- [       Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2020-01-21 21:23:44.704  WARN 70 --- [       Thread-6] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2020-01-21 21:23:44.705  INFO 70 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-01-21 21:23:44.713  INFO 70 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.2:jar (default-jar) @ authorization-service ---
+[INFO] Building jar: /workspace/source/target/authorization-service-0.0.7.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.9.RELEASE:repackage (repackage) @ authorization-service ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:unpack (unpack) @ authorization-service ---
+[INFO] Configured Artifact: fr.unice.polytech.si5.al.creditrama.teamd:authorization-service:0.0.7:jar
+[INFO] Unpacking /workspace/source/target/authorization-service-0.0.7.jar to /workspace/source/target/dependency with includes "" and excludes ""
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ authorization-service ---
+[INFO] Installing /workspace/source/target/authorization-service-0.0.7.jar to /root/.mvnrepository/fr/unice/polytech/si5/al/creditrama/teamd/authorization-service/0.0.7/authorization-service-0.0.7.jar
+[INFO] Installing /workspace/source/pom.xml to /root/.mvnrepository/fr/unice/polytech/si5/al/creditrama/teamd/authorization-service/0.0.7/authorization-service-0.0.7.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ authorization-service ---
+[INFO] Using alternate deployment repository nexus::default::http://nexus/repository/maven-releases/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:02 min
+[INFO] Finished at: 2020-01-21T21:24:01Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-5hxp4-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
+v1.0.1
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-5hxp4-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image openjdk:8-jdk-slim    
+2020/01/21 21:24:04 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:1ca54f9636c527ec05550bf9bdcbc10a86ab6c28381db73ac3411466055dd300: no such file or directory 
+[36mINFO[0m[0001] Downloading base image openjdk:8-jdk-slim    
+2020/01/21 21:24:06 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] cmd: EXPOSE                                  
+[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0002] Using files from context: [/workspace/source/pom.xml] 
+[36mINFO[0m[0002] Using files from context: [/workspace/source/target/authorization-service-0.0.7.jar] 
+[36mINFO[0m[0002] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0002] Taking snapshot of full filesystem...        
+[36mINFO[0m[0067] ENV PORT 8080                                
+[36mINFO[0m[0067] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0067] ENV CLASSPATH /opt/lib                       
+[36mINFO[0m[0067] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0067] EXPOSE 8080                                  
+[36mINFO[0m[0067] cmd: EXPOSE                                  
+[36mINFO[0m[0067] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0067] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0067] Using files from context: [/workspace/source/pom.xml] 
+[36mINFO[0m[0067] COPY pom.xml target/lib* /opt/lib/           
+[36mINFO[0m[0067] Taking snapshot of files...                  
+[36mINFO[0m[0068] Using files from context: [/workspace/source/target/authorization-service-0.0.7.jar] 
+[36mINFO[0m[0068] COPY target/*.jar /opt/app.jar               
+[36mINFO[0m[0068] Taking snapshot of files...                  
+[36mINFO[0m[0069] WORKDIR /opt                                 
+[36mINFO[0m[0069] cmd: workdir                                 
+[36mINFO[0m[0069] Changed working directory to /opt            
+[36mINFO[0m[0069] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0069] CMD ["java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-jar", "app.jar"] 
+[36mINFO[0m[0069] No files changed in this command, skipping snapshotting. 
+2020/01/21 21:25:13 existing blob: sha256:8ec398bc03560e0fa56440e96da307cdf0b1ad153f459b52bca53ae7ddb8236d
+2020/01/21 21:25:13 existing blob: sha256:2af781a14d60d4ac7ef41ca3bed9787d5bc332e74f0b64183528b9ae196b6aa4
+2020/01/21 21:25:13 existing blob: sha256:e18af1784b1ff42bce5eb771c6fb00c06471e462db471e4821b42a75f99d1bee
+2020/01/21 21:25:13 existing blob: sha256:8e866b0959566a21a8fa7eb2f7f12da0d12aa3498d6c31bb25a6ede1fa632ac2
+2020/01/21 21:25:15 pushed blob: sha256:5bb0553104d91fcaff201eea686df2a5d2eb0a14159e8a0abaf33a81feccbb0a
+2020/01/21 21:25:15 pushed blob: sha256:67b84dc670de3b5731b147dff684d3a8aabdb30f39aec70053db7a75921433a5
+2020/01/21 21:25:17 pushed blob: sha256:fafae9f1adfce1713169f123842196d5efd1b365adc881c97425b756be9561cc
+2020/01/21 21:25:17 docker-registry.default.svc:5000/pns-si5-al-creditrama-d-1920/creditrama-team-d-authorization-service:0.0.7: digest: sha256:c31b06e826374b70a312198b17972315b85bd4187e6b11f1a1c34f2fb106792d size: 1245
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-5hxp4-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-5hxp4-6[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/creditrama-team-d-authorization-service to an unshallow repository
+Generating change log from git ref 3bc9092a7dcd3040307b4094aa799fc5b3c61bc8 => 622a920e0dbefcf56667673c1b17ca30f00347de
+WARNING: No release found for pns-si5-al-creditrama-d-1920/creditrama-team-d-authorization-service and tag v0.0.7 so creating a new release
+Updated the release information at https://github.com/pns-si5-al-creditrama-d-1920/creditrama-team-d-authorization-service/releases/tag/v0.0.7
+generated: /workspace/source/charts/creditrama-team-d-authorization-service/templates/release.yaml
+Created Release creditrama-team-d-authorization-service-0-0-7 resource in namespace **
+Updating PipelineActivity pns-si5-al-creditrama-d-1920-creditrama-team-d-authorization-service-master-6 with version 0.0.7
+Updated PipelineActivities pns-si5-al-creditrama-d-1920-creditrama-team-d-authorization-service-master-6 with release notes URL: https://github.com/pns-si5-al-creditrama-d-1920/creditrama-team-d-authorization-service/releases/tag/v0.0.7
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-5hxp4-6[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file creditrama-team-d-authorization-service-0.0.7.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-5hxp4-6[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app creditrama-team-d-authorization-service version 0.0.7 to namespace pns-si5-al-creditrama-d-1920
+Created Pull Request: https://github.com/************/environment-**-github-alexis/pull/7
+Added label updatebot to Pull Request https://github.com/************/environment-**-github-alexis/pull/7
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/7 ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee Could not find a status for repository ************/environment-**-github-alexis with ref 545ad02080bafc8d429f6b19d2b2df0e91f313ee
+Pull Request https://github.com/************/environment-**-github-alexis/pull/7 is merged at sha 5c31989e9c9201ba1ca31aeeaaa722541ad49f1b
+Pull Request merged but we are not waiting for the update pipeline to complete!

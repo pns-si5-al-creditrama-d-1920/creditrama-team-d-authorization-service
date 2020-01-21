@@ -1,0 +1,246 @@
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-2cqkl-4[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-p85gh[0m
+{"level":"warn","ts":1579640272.5665705,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1579640272.5673864,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-2cqkl-4[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-v8ndr[0m
+{"level":"warn","ts":1579640278.0149553,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1579640278.0165186,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-2cqkl-4[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-2cqkl-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-pns-si5-al-creditrama-d-1920-cr-kl8g9[0m
+{"level":"warn","ts":1579640334.7176828,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1579640336.3909879,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/pns-si5-al-creditrama-d-1920/creditrama-team-d-authorization-service.git @ v0.0.5 in path /workspace/source"}
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-2cqkl-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:3d702c2361ab2e464e2c91e674808110ac0e3cc6
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-2cqkl-4[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-2cqkl-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for fr.unice.polytech.si5.al.creditrama.teamd:authorization-service:jar:0.0.5
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:jar -> duplicate declaration of version 2.1.8.RELEASE @ line 71, column 21
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:jar -> duplicate declaration of version 2.1.8.RELEASE @ line 77, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] --< fr.unice.polytech.si5.al.creditrama.teamd:authorization-service >---
+[INFO] Building authorization-service 0.0.5
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ authorization-service ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ authorization-service ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ authorization-service ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 16 source files to /workspace/source/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ authorization-service ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ authorization-service ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /workspace/source/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ authorization-service ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests
+21:02:39.527 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:02:39.532 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+21:02:39.587 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+21:02:39.604 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+21:02:39.615 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests], using SpringBootContextLoader
+21:02:39.618 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]: class path resource [fr/unice/polytech/si5/al/creditrama/teamd/authorizationservice/AuthorizationServiceApplicationTests-context.xml] does not exist
+21:02:39.618 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]: class path resource [fr/unice/polytech/si5/al/creditrama/teamd/authorizationservice/AuthorizationServiceApplicationTestsContext.groovy] does not exist
+21:02:39.618 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:02:39.619 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]: AuthorizationServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:02:39.715 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:02:39.905 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/workspace/source/target/classes/fr/unice/polytech/si5/al/creditrama/teamd/authorizationservice/AuthorizationServiceApplication.class]
+21:02:39.906 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplication for test class fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests
+21:02:40.134 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]: using defaults.
+21:02:40.135 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+21:02:40.197 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5c33f1a9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1623b78d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@c8c12ac, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6adbc9d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4550bb58, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4ec4f3a0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@223191a6, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@49139829, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@9597028, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6069db50, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4efbca5a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1b7cc17c]
+21:02:40.198 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:02:40.199 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:02:40.200 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:02:40.200 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:02:40.200 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:02:40.200 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:02:40.204 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4562e04d testClass = AuthorizationServiceApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2a65fe7c testClass = AuthorizationServiceApplicationTests, locations = '{}', classes = '{class fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@42d8062c, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@59906517, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@612fc6eb, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@64f6106c], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+21:02:40.204 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:02:40.204 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests]
+21:02:40.286 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+2020-01-21 21:02:42.404  INFO 70 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$cdc29aae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.9.RELEASE)
+
+2020-01-21 21:02:43.282  INFO 70 --- [           main] t.a.AuthorizationServiceApplicationTests : No active profile set, falling back to default profiles: default
+2020-01-21 21:02:45.806  INFO 70 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-21 21:02:45.987  INFO 70 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 175ms. Found 3 repository interfaces.
+2020-01-21 21:02:46.789  INFO 70 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=786a8f57-9bb2-34dd-9d22-35caf6a0375f
+2020-01-21 21:02:47.535  INFO 70 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b1a897b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-21 21:02:47.792  INFO 70 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$cdc29aae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-21 21:02:48.124  INFO 70 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-21 21:02:48.609  INFO 70 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-21 21:02:49.086  INFO 70 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-01-21 21:02:49.198  INFO 70 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.12.Final}
+2020-01-21 21:02:49.199  INFO 70 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-01-21 21:02:49.491  INFO 70 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-01-21 21:02:49.815  INFO 70 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-01-21 21:02:51.520  INFO 70 --- [           main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@61c87f1b'
+2020-01-21 21:02:51.529  INFO 70 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-21 21:02:55.311  INFO 70 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-21 21:02:55.416  WARN 70 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-21 21:02:58.596  INFO 70 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/oauth/token', OPTIONS], []
+2020-01-21 21:02:58.810  INFO 70 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18e76101, org.springframework.security.web.context.SecurityContextPersistenceFilter@7dfec0bc, org.springframework.security.web.header.HeaderWriterFilter@438a2d3, org.springframework.security.web.authentication.logout.LogoutFilter@666b1244, org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter@6fdb1a59, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@731d0d5c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52ccf197, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54530644, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79349b61, org.springframework.security.web.session.SessionManagementFilter@54d46c8, org.springframework.security.web.access.ExceptionTranslationFilter@7b9fea11, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2568611c]
+2020-01-21 21:02:58.824  INFO 70 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@346330b6, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71e2843b, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e8698c0, org.springframework.security.web.header.HeaderWriterFilter@2d9df336, org.springframework.security.web.authentication.logout.LogoutFilter@56a72887, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@4a773f08, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5df54296, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1fb30e5d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20d3fff4, org.springframework.security.web.session.SessionManagementFilter@131b58d4, org.springframework.security.web.access.ExceptionTranslationFilter@4fb99927, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@285b491f]
+2020-01-21 21:02:58.912  INFO 70 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12a9e864, org.springframework.security.web.context.SecurityContextPersistenceFilter@7865cc83, org.springframework.security.web.header.HeaderWriterFilter@2079fcfc, org.springframework.security.web.csrf.CsrfFilter@6556471b, org.springframework.security.web.authentication.logout.LogoutFilter@126d0868, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1e295f7f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@443ac5b8, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@462f8fe9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@24f2608b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5cb76070, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3346e906, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c6fc4cd, org.springframework.security.web.session.SessionManagementFilter@77401977, org.springframework.security.web.access.ExceptionTranslationFilter@7cdb05aa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@19e5e110]
+2020-01-21 21:02:59.483  INFO 70 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-01-21 21:02:59.624  INFO 70 --- [           main] t.a.AuthorizationServiceApplicationTests : Started AuthorizationServiceApplicationTests in 19.33 seconds (JVM running for 21.15)
+2020-01-21 21:02:59.714  INFO 70 --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.929 s - in fr.unice.polytech.si5.al.creditrama.teamd.authorizationservice.AuthorizationServiceApplicationTests
+2020-01-21 21:03:00.198  INFO 70 --- [       Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-21 21:03:00.203  INFO 70 --- [       Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-01-21 21:03:00.203  INFO 70 --- [       Thread-6] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-01-21 21:03:00.209  WARN 70 --- [       Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2020-01-21 21:03:00.209 ERROR 70 --- [       Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2020-01-21 21:03:00.210  WARN 70 --- [       Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2020-01-21 21:03:00.210 ERROR 70 --- [       Thread-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2020-01-21 21:03:00.211  WARN 70 --- [       Thread-6] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2020-01-21 21:03:00.216  INFO 70 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-01-21 21:03:00.218  INFO 70 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.2:jar (default-jar) @ authorization-service ---
+[INFO] Building jar: /workspace/source/target/authorization-service-0.0.5.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.9.RELEASE:repackage (repackage) @ authorization-service ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:unpack (unpack) @ authorization-service ---
+[INFO] Configured Artifact: fr.unice.polytech.si5.al.creditrama.teamd:authorization-service:0.0.5:jar
+[INFO] Unpacking /workspace/source/target/authorization-service-0.0.5.jar to /workspace/source/target/dependency with includes "" and excludes ""
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ authorization-service ---
+[INFO] Installing /workspace/source/target/authorization-service-0.0.5.jar to /root/.mvnrepository/fr/unice/polytech/si5/al/creditrama/teamd/authorization-service/0.0.5/authorization-service-0.0.5.jar
+[INFO] Installing /workspace/source/pom.xml to /root/.mvnrepository/fr/unice/polytech/si5/al/creditrama/teamd/authorization-service/0.0.5/authorization-service-0.0.5.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ authorization-service ---
+[INFO] Using alternate deployment repository nexus::default::http://nexus/repository/maven-releases/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  05:54 min
+[INFO] Finished at: 2020-01-21T21:05:05Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-2cqkl-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
+v1.0.1
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-2cqkl-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image openjdk:8-jdk-slim    
+2020/01/21 21:05:09 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:1ca54f9636c527ec05550bf9bdcbc10a86ab6c28381db73ac3411466055dd300: no such file or directory 
+[36mINFO[0m[0001] Downloading base image openjdk:8-jdk-slim    
+2020/01/21 21:05:11 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] cmd: EXPOSE                                  
+[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0002] Using files from context: [/workspace/source/pom.xml] 
+[36mINFO[0m[0002] Using files from context: [/workspace/source/target/authorization-service-0.0.5.jar] 
+[36mINFO[0m[0002] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0002] Taking snapshot of full filesystem...        
+[36mINFO[0m[0114] ENV PORT 8080                                
+[36mINFO[0m[0114] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0114] ENV CLASSPATH /opt/lib                       
+[36mINFO[0m[0114] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0114] EXPOSE 8080                                  
+[36mINFO[0m[0114] cmd: EXPOSE                                  
+[36mINFO[0m[0114] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0114] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0114] Using files from context: [/workspace/source/pom.xml] 
+[36mINFO[0m[0114] COPY pom.xml target/lib* /opt/lib/           
+[36mINFO[0m[0114] Taking snapshot of files...                  
+[36mINFO[0m[0114] Using files from context: [/workspace/source/target/authorization-service-0.0.5.jar] 
+[36mINFO[0m[0114] COPY target/*.jar /opt/app.jar               
+[36mINFO[0m[0114] Taking snapshot of files...                  
+[36mINFO[0m[0115] WORKDIR /opt                                 
+[36mINFO[0m[0115] cmd: workdir                                 
+[36mINFO[0m[0115] Changed working directory to /opt            
+[36mINFO[0m[0115] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0115] CMD ["java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-jar", "app.jar"] 
+[36mINFO[0m[0115] No files changed in this command, skipping snapshotting. 
+2020/01/21 21:07:05 existing blob: sha256:8e866b0959566a21a8fa7eb2f7f12da0d12aa3498d6c31bb25a6ede1fa632ac2
+2020/01/21 21:07:05 existing blob: sha256:2af781a14d60d4ac7ef41ca3bed9787d5bc332e74f0b64183528b9ae196b6aa4
+2020/01/21 21:07:05 existing blob: sha256:e18af1784b1ff42bce5eb771c6fb00c06471e462db471e4821b42a75f99d1bee
+2020/01/21 21:07:05 existing blob: sha256:8ec398bc03560e0fa56440e96da307cdf0b1ad153f459b52bca53ae7ddb8236d
+2020/01/21 21:07:11 pushed blob: sha256:d2f588497af5350b6bb125eb4c187321b92f2949cab7e877cded4c44e22456f6
+2020/01/21 21:07:11 pushed blob: sha256:53437cd043b67860ce78743bc53d069c34a5a160c9f52a5d821fb65b304ac9d8
+2020/01/21 21:07:11 pushed blob: sha256:7a7a39a7c9f7409b1f090ace747a5744f8ee56924d39283b235dcdaf15f7d0d8
+2020/01/21 21:07:11 docker-registry.default.svc:5000/pns-si5-al-creditrama-d-1920/creditrama-team-d-authorization-service:0.0.5: digest: sha256:0461590c6296fe34adcc23606f2bfbd06f20df0756f4a69cdebfa73cc4b9ae3b size: 1245
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-2cqkl-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-2cqkl-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/creditrama-team-d-authorization-service to an unshallow repository
+Generating change log from git ref 5bc264e3ecda04f37ab6c2d0d146127cadd262f8 => 989190a690d427265bc336f55446ce182e91776d
+WARNING: Failed to enrich commit 3d702c2361ab2e464e2c91e674808110ac0e3cc6 with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit 3d702c2361ab2e464e2c91e674808110ac0e3cc6 with issues: users.jenkins.io "x-0" already exists
+Finding issues in commit messages using git format
+WARNING: No release found for pns-si5-al-creditrama-d-1920/creditrama-team-d-authorization-service and tag v0.0.5 so creating a new release
+Updated the release information at https://github.com/pns-si5-al-creditrama-d-1920/creditrama-team-d-authorization-service/releases/tag/v0.0.5
+generated: /workspace/source/charts/creditrama-team-d-authorization-service/templates/release.yaml
+Created Release creditrama-team-d-authorization-service-0-0-5 resource in namespace **
+Updating PipelineActivity pns-si5-al-creditrama-d-1920-creditrama-team-d-authorization-service-master-4 with version 0.0.5
+Updated PipelineActivities pns-si5-al-creditrama-d-1920-creditrama-team-d-authorization-service-master-4 with release notes URL: https://github.com/pns-si5-al-creditrama-d-1920/creditrama-team-d-authorization-service/releases/tag/v0.0.5
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-2cqkl-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file creditrama-team-d-authorization-service-0.0.5.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mpns-si5-al-creditrama-d-1920-cr-2cqkl-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app creditrama-team-d-authorization-service version 0.0.5 to namespace pns-si5-al-creditrama-d-1920
+Created Pull Request: https://github.com/************/environment-**-github-alexis/pull/6
+Added label updatebot to Pull Request https://github.com/************/environment-**-github-alexis/pull/6
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/6 ref f9dd3d2c8904c5041e1c92ec93785fb9e26194aa Could not find a status for repository ************/environment-**-github-alexis with ref f9dd3d2c8904c5041e1c92ec93785fb9e26194aa
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/6 ref f9dd3d2c8904c5041e1c92ec93785fb9e26194aa Could not find a status for repository ************/environment-**-github-alexis with ref f9dd3d2c8904c5041e1c92ec93785fb9e26194aa
+WARNING: Failed to query the Pull Request last commit status for https://github.com/************/environment-**-github-alexis/pull/6 ref f9dd3d2c8904c5041e1c92ec93785fb9e26194aa Could not find a status for repository ************/environment-**-github-alexis with ref f9dd3d2c8904c5041e1c92ec93785fb9e26194aa
+Pull Request https://github.com/************/environment-**-github-alexis/pull/6 is merged at sha 3a4e9b73584179aa9b655d09ce92c6f2821d43ee
+Pull Request merged but we are not waiting for the update pipeline to complete!

@@ -3,6 +3,8 @@ pipelineConfig:
   env:
     - name: ORG
       value: al-team-d
+    - name: REPO_OWNER
+      value: al-team-d
   pipelines:
     overrides:
       - pipeline: release

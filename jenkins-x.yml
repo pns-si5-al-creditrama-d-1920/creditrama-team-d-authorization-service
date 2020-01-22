@@ -1,5 +1,8 @@
 buildPack: maven
 pipelineConfig:
+  env:
+    - name: ORG
+      value: al-team-d
   pipelines:
     overrides:
       - pipeline: release

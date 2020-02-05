@@ -26,5 +26,18 @@ public class DataLoader implements ApplicationRunner {
         if (!oauthClientDetailsRepository.existsById(oauthClientDetails.getClient_id())) {
             oauthClientDetailsRepository.save(oauthClientDetails);
         }
+
+        OauthClientDetails oauthClientDetails2 = OauthClientDetails.builder()
+                .client_id("api")
+                .client_secret("{bcrypt}$2a$10$gPhlXZfms0EpNHX0.HHptOhoFD1AoxSr/yUIdTqA8vtjeP4zi0DDu")
+                .web_server_redirect_uri("http://localhost:8080/code")
+                .scope("READ,WRITE")
+                .access_token_validity(3600)
+                .refresh_token_validity(1000)
+                .authorized_grant_types("client_credentials")
+                .additional_information("{}").build();
+        if (!oauthClientDetailsRepository.existsById(oauthClientDetails2.getClient_id())) {
+            oauthClientDetailsRepository.save(oauthClientDetails2);
+        }
     }
 }
